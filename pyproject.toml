@@ -1,0 +1,26 @@
+[build-system]
+requires=["setuptools>=68.0", "wheel"]
+build-backend="setuptools.build_meta"
+
+[project]
+name="cogniforge"
+version="0.1.0"
+description="AI-Era Developer Cognitive Enhancement Engine"
+readme="README.md"
+authors=[{name="lanekingkong", email="lanekingkong@github.com"}]
+license={text="MIT"}
+requires-python=">=3.10"
+classifiers=[
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.scripts]
+cogniforge="src.cli.main:app"
+
+[project.optional-dependencies]
+dev=["pytest", "pytest-asyncio", "black"]

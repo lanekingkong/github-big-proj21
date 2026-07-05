@@ -1,0 +1,13 @@
+[
+  "tests/test_core.py::test_bendi_db",
+  "tests/test_core.py::test_gonggu",
+  "tests/test_core.py::test_jilu_he_huiqu",
+  "tests/test_core.py::test_tongbu_claude",
+  "tests/test_core.py::test_tongbu_liebiao",
+  "tests/test_core.py::test_tongji",
+  "tests/test_core.py::test_tupu_cunchu",
+  "tests/test_core.py::test_tupu_goujian",
+  "tests/test_core.py::test_tupu_sousuo",
+  "tests/test_core.py::test_yasuo_level1",
+  "tests/test_core.py::test_yasuo_mulushu"
+]

@@ -1,0 +1,30 @@
+# CogniForge - AI时代开发者认知增强引擎
+# 核心依赖
+
+# 向量存储
+lancedb>=0.17.0
+sentence-transformers>=3.3.0
+
+# 图谱与分析
+networkx>=3.4
+scikit-learn>=1.5.0
+
+# CLI与终端
+typer>=0.15.0
+rich>=13.9.0
+watchdog>=6.0.0
+
+# MCP协议
+fastmcp>=2.0.0
+
+# 工具类
+pydantic>=2.10.0
+pyyaml>=6.0
+click>=8.1.0
+tqdm>=4.67.0
+gitpython>=3.1.0
+
+# 开发
+pytest>=8.3.0
+pytest-asyncio>=0.25.0
+black>=24.0.0

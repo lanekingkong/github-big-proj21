@@ -1,0 +1,33 @@
+# CogniForge 内置技能：Prompt自动增强
+# 为AI工具自动注入项目上下文
+
+name: prompt-enhancer
+description: 自动为AI工具的prompt注入项目上下文，提升AI编码质量
+version: 0.1.0
+type: assistant
+
+triggers:
+  - before_ai_query: true
+
+instructions: |
+  在AI工具执行查询前自动注入：
+  1. 从 .cogniforge/context_cache.json 加载压缩上下文
+  2. 提取当前关注文件的代码片段
+  3. 追加到prompt末尾（不改变用户原始意图）
+  
+  注入模板：
+  ---
+  ## 项目上下文（自动注入）
+  - 项目: {project_name}
+  - 语言: Python
+  - 关键架构决策: {key_decisions}
+  - 当前关注文件: {focus_files}
+  
+  ## 代码规范
+  - 遵循现有代码风格
+  - 使用项目已有的工具函数
+  ---
+
+examples:
+  - user_asks: "写一个登录函数"
+    enhanced: "写一个登录函数\n\n---\n项目上下文: Flask应用, JWT认证, SQLAlchemy..."

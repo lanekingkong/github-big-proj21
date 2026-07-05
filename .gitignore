@@ -1,0 +1,41 @@
+# CogniForge
+# AI记忆系统项目
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# CogniForge内部（仓库中不纳入版本）
+*.lance/
+*.db
+.cogniforge/
+*.egg-info/
+__pycache__/
+
+# 测试
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 临时文件
+*.tmp
+*.log

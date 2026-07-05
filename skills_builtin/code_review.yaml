@@ -1,0 +1,30 @@
+# CogniForge 内置技能：代码审查助手
+# 基于项目记忆进行智能代码审查
+
+name: code-review
+description: 基于项目规范和历史决策进行智能代码审查
+version: 0.1.0
+type: quality
+
+triggers:
+  - "review"
+  - "审查"
+  - "检查代码"
+  - "code review"
+
+instructions: |
+  代码审查时：
+  1. 从记忆宫殿召回代码规范（patterns hall）
+  2. 从知识图谱检查新代码是否符合现有架构
+  3. 从修复记录（fixes hall）检查是否重复已知Bug
+  4. 生成审查报告
+  
+  审查维度：
+  - 架构一致性：与现有代码结构是否匹配
+  - 模式一致性：是否遵循项目代码模式
+  - 已知问题：是否重复出现过的Bug
+  - 测试覆盖：是否添加对应测试
+
+examples:
+  - user: "审查这段代码"
+    action: "对比项目规范，检查重复Bug，生成审查报告"

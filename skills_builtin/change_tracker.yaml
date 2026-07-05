@@ -1,0 +1,28 @@
+# CogniForge 内置技能：代码变更追踪
+# 记录重大代码变更，建立变更叙事
+
+name: change-tracker
+description: 自动追踪项目重大变更，记录变更原因和影响分析
+version: 0.1.0
+type: automation
+
+triggers:
+  - watch: "**/*.py"
+  - git_commit: true
+
+instructions: |
+  每次代码变更时：
+  1. 检测 git diff 涉及的文件
+  2. 分析变更类型：新增/修改/删除
+  3. 自动记录到记忆宫殿（fixes h all）
+  4. 更新知识图谱索引（增量）
+  
+  变更叙事模板：
+  - 时间: {timestamp}
+  - 文件: {files_changed}
+  - 类型: {change_type}
+  - 影响: {impact_analysis}
+
+examples:
+  - event: "commit: refactor engine"
+    action: "记录重构影响，更新知识图谱"

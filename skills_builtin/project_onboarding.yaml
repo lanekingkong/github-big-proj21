@@ -1,0 +1,33 @@
+# CogniForge 内置技能：项目快速理解
+# 当被问及"这个项目是干嘛的"时自动调用
+
+name: project-onboarding
+description: 快速理解项目结构、架构和关键决策
+version: 0.1.0
+type: knowledge
+
+triggers:
+  - "这个项目"
+  - "项目结构"
+  - "架构是什么"
+  - "技术栈"
+  - "怎么开始"
+  - "项目简介"
+
+instructions: |
+  当用户询问项目相关信息时：
+  1. 从 .cogniforge/memory_palace.json 加载记忆
+  2. 优先展示架构决策（decisions hall）
+  3. 展示项目目录结构
+  4. 提供快速开始指南
+  
+  关键数据源：
+  - 记忆宫殿：架构决策 + 项目上下文
+  - 知识图谱：核心类和函数
+  - 上下文压缩：Level 2 结构层
+
+examples:
+  - user: "这个项目是干嘛的"
+    response: "加载项目上下文，展示架构概览..."
+  - user: "技术栈是什么"
+    response: "从记忆宫殿召回技术选型相关记忆..."
